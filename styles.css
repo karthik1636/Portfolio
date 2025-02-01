@@ -454,94 +454,90 @@ body {
 }
 
 
-/* Media Queries for Tablets and Below (Devices with widths up to 1024px) */
+/* Base styles for responsiveness */
 @media (max-width: 1024px) {
     .header-content {
         font-size: 1.8em; /* Adjust font size for tablets */
     }
 }
 
-/* Media Queries for Mobile Devices (Devices with widths up to 768px) */
+/* Adjustments for standard mobile devices */
 @media (max-width: 768px) {
-    /* Adjustments for Header and Navigation */
     .header-background {
-        height: 250px; /* Adjust the height of the header */
+        height: 250px; /* Adjust the header height */
     }
-
     .header-content,
+    .education-entry,
     .contact-link,
     .experience-entry .logo-container img,
     .text-content h3,
     .project-entry {
-        font-size: 1.5em; /* Adjust font size for mobile devices */
+        font-size: 1.5em; /* Adjust font size */
         padding: 0 20px; /* Add padding for layout integrity */
     }
-
-    nav a {
-        padding: 10px 12px; /* Adjust padding for navigation links */
-    }
-
-    /* Section and Sidebar Adjustments */
     .section,
     .sidenav {
-        padding: 15px; /* Smaller padding for sections */
-        width: 250px; /* Adjust sidenav width when expanded */
+        padding: 15px; /* Adjust padding for sections and sidebar */
+        width: 100%; /* Full width for the sidenav */
     }
-
-    /* Project, Contact, and About Section Adjustments */
     .project-entry,
+    .education-entry,
     .about-container,
     .experience-entry {
         flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center-align items */
-        text-align: center; /* Center-align text */
     }
-
     .project-cover,
     .cover-pic {
-        width: 100%; /* Adjust image width */
-        height: auto; /* Adjust image height */
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
         margin-bottom: 10px; /* Space below images */
     }
-
-    .about-text {
-        max-width: 100%; /* Full width for text */
-    }
-
-    .contact-link {
-        width: 50px; /* Adjust contact icon size */
-        height: 50px;
-    }
-
-    .contact-logo,
-    .logo-container img {
-        padding: 10%; /* Adjust padding around logos */
-        width: 60px; /* Adjust logo size */
-        margin-bottom: 10px; /* Space below logos */
-    }
-
+    .about-text,
     .text-content ul {
-        text-align: left; /* Ensure text alignment is consistent */
+        max-width: 100%; /* Full width for text */
     }
 }
 
-/* Media Queries for Very Small Devices (Devices with widths up to 480px) */
-@media (max-width: 480px) {
+/* Specific adjustments for iPhones and similar Android devices */
+@media (max-width: 390px) { /* Covers iPhone 12 Pro, 13 Pro, and other similar sizes */
+    .header-content,
+    .contact-link,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 1.4em; /* Slightly reduced font size for smaller devices */
+    }
+    .contact-link,
+    .logo-container img {
+        width: 45px; /* Smaller contact icons and logos */
+        height: 45px;
+    }
+}
+
+@media (max-width: 428px) { /* Covers iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max */
+    .header-content,
+    .contact-link,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 1.5em; /* Adjust font size for larger screens among small devices */
+    }
+    .contact-link,
+    .logo-container img {
+        width: 50px; /* Adjust contact icon and logo size */
+        height: 50px;
+    }
+}
+
+/* Very small devices like iPhone SE */
+@media (max-width: 320px) {
     .header-content {
-        font-size: 1.2em; /* Further reduce font size for small devices */
+        font-size: 1.2em; /* Further reduce font size for very small devices like iPhone SE */
     }
-
-    nav {
-        background-color: rgba(0, 0, 0, 0.85); /* Darker background for readability */
-    }
-
     .contact-link {
-        width: 35px; /* Smaller contact icons */
+        width: 35px; /* Further reduce the size of contact links */
         height: 35px;
     }
-
     .contact-logo {
-        width: 80%; /* Adjust logo width within the contact link */
+        width: 80%; /* Adjust the width of logos within the contact link */
     }
 }
 
