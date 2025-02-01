@@ -10,24 +10,41 @@ body {
     color: #333;
 }
 
+
 .header-background {
-    background: url('path_to_your_background_image.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 180px 50px;
     position: relative;
+    width: 100%;
+    height: 350px; /* Adjust based on your header image's aspect ratio */
+    background-image: url('Downtown_Houston_Click_Cropped.jpg'); /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
 
-.header-background {
-    background: url('Downtown_Houston_Click_Cropped.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 180px 50px;
-    position: relative;
-    overflow: hidden;
+.header-content {
+    position: absolute;
+	width: 100%;  /* Ensures the container can extend full width */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF; /* Ensure high contrast for text */
+    font-size: 1.2em;
+	white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Keeps the text within the container */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
+    z-index: 5; /* Ensure text appears above the background but below icons */
 }
+
+
+
+@media (max-width: 768px) {
+    .header-content {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+}
+
 
 .header-background::before {
     content: "";
@@ -36,21 +53,15 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
-    z-index: 0;
+    background: rgba(0, 0, 0, 0.3); /* Light dark overlay for contrast */
+    z-index: 3; /* Below text and icons */
 }
 
-.header-content {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    padding: 10px 0;
-    margin-top: -200px;
-}
+
+
+
+
+
 
 nav {
     position: sticky;
@@ -90,14 +101,7 @@ nav a:hover {
 
 
 
-.contact-info a {
-    color: #0077b6;
-    text-decoration: none;
-}
 
-.contact-info a:hover {
-    text-decoration: underline;
-}
 
 .sidenav {
     width: 0;
@@ -428,8 +432,8 @@ body {
 
 /* Cover Image Styling */
 .project-cover {
-    width: 200px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -469,5 +473,106 @@ body {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+.contact-info {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    z-index: 10;
+}
+
+.contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.contact-logo {
+    width: 70%;
+    height: auto;
+    padding: 15%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .contact-link {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-logo {
+        padding: 10%;
+    }
+}
+
+/* Media Queries for Tablets (Devices with widths up to 1024px) */
+@media (max-width: 1024px) {
+    .header-content {
+        font-size: 1.8em; /* Adjust font size for tablets */
+    }
+}
+
+/* Media Queries for Mobile Devices (Devices with widths up to 768px) */
+@media (max-width: 768px) {
+    .header-background {
+        height: 250px; /* Adjust the height of the header on mobile devices */
+    }
+
+    .header-content {
+        font-size: 1.5em; /* Adjust font size for mobile devices */
+        padding: 0 20px; /* Add padding to maintain layout integrity */
+    }
+
+    nav a {
+        padding: 10px 12px; /* Adjust padding for smaller screens in the navigation links */
+    }
+
+    .section {
+        padding: 15px; /* Smaller padding for section elements */
+        margin: 10px; /* Adjust margins to fit smaller screens */
+    }
+
+    .sidenav {
+        width: 250px; /* Full width of the side navigation when expanded */
+    }
+}
+
+/* Media Queries for Very Small Devices (Devices with widths up to 480px) */
+@media (max-width: 480px) {
+    .header-content {
+        font-size: 1.2em; /* Further reduce font size for very small devices */
+    }
+
+    nav {
+        background-color: rgba(0, 0, 0, 0.85); /* Slightly darker background for better readability */
+    }
+
+    .contact-link {
+        width: 35px; /* Smaller contact icons */
+        height: 35px;
+    }
+
+    .contact-logo {
+        width: 80%; /* Adjust logo width within the contact link */
     }
 }
