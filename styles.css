@@ -453,92 +453,106 @@ body {
     object-fit: contain;
 }
 
-
-/* Base styles for responsiveness */
+/* Base settings for larger devices and general adjustments */
 @media (max-width: 1024px) {
     .header-content {
-        font-size: 1.8em; /* Adjust font size for tablets */
+        font-size: 1.8em; /* Slightly larger font for tablets */
     }
 }
 
-/* Adjustments for standard mobile devices */
-@media (max-width: 768px) {
-    .header-background {
-        height: 250px; /* Adjust the header height */
-    }
+/* Media Queries for various iPhone models and other similar devices */
+/* Targeting iPhone 16 Pro Max, 15 Pro Max, and similar large models */
+@media (max-width: 440px) {
     .header-content,
     .education-entry,
     .contact-link,
     .experience-entry .logo-container img,
-    .text-content h3,
-    .project-entry {
-        font-size: 1.5em; /* Adjust font size */
-        padding: 0 20px; /* Add padding for layout integrity */
+    .text-content h3 {
+        font-size: 1.5em; /* Suitable font size for larger phones */
     }
-    .section,
-    .sidenav {
-        padding: 15px; /* Adjust padding for sections and sidebar */
-        width: 100%; /* Full width for the sidenav */
+
+    .contact-link,
+    .logo-container img {
+        width: 60px; /* Adjust icon and logo sizes for better visibility */
+        height: 60px;
     }
-    .project-entry,
+
     .education-entry,
-    .about-container,
-    .experience-entry {
+    .project-entry,
+    .section {
+        padding: 15px; /* Adequate padding for readability */
         flex-direction: column; /* Stack elements vertically */
     }
-    .project-cover,
-    .cover-pic {
-        width: 100%; /* Full width for images */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 10px; /* Space below images */
-    }
-    .about-text,
-    .text-content ul {
-        max-width: 100%; /* Full width for text */
-    }
 }
 
-/* Specific adjustments for iPhones and similar Android devices */
-@media (max-width: 390px) { /* Covers iPhone 12 Pro, 13 Pro, and other similar sizes */
+/* Adjustments for mid-sized models like iPhone 16, 16 Plus */
+@media (max-width: 430px) {
     .header-content,
+    .education-entry,
     .contact-link,
     .experience-entry .logo-container img,
     .text-content h3 {
-        font-size: 1.4em; /* Slightly reduced font size for smaller devices */
+        font-size: 1.4em; /* Adjust font size for readability */
     }
+
     .contact-link,
     .logo-container img {
-        width: 45px; /* Smaller contact icons and logos */
-        height: 45px;
+        width: 55px; /* Slightly smaller icons suitable for mid-sized screens */
+        height: 55px;
     }
 }
 
-@media (max-width: 428px) { /* Covers iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max */
+/* Specific settings for smaller models like iPhone 16 Pro */
+@media (max-width: 402px) {
     .header-content,
+    .education-entry,
     .contact-link,
     .experience-entry .logo-container img,
     .text-content h3 {
-        font-size: 1.5em; /* Adjust font size for larger screens among small devices */
+        font-size: 1.3em; /* Reduce font size for smaller devices */
     }
-    .contact-link,
-    .logo-container img {
-        width: 50px; /* Adjust contact icon and logo size */
+
+    .contact-link {
+        width: 50px; /* Smaller icons for compact display */
         height: 50px;
     }
 }
 
-/* Very small devices like iPhone SE */
-@media (max-width: 320px) {
-    .header-content {
-        font-size: 1.2em; /* Further reduce font size for very small devices like iPhone SE */
+/* Adjustments for models like iPhone 14 Plus, 13 Pro Max, 12 Pro Max */
+@media (max-width: 428px) {
+    .header-content,
+    .education-entry,
+    .contact-link,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 1.5em; /* Maintain a readable font size */
     }
+
     .contact-link {
-        width: 35px; /* Further reduce the size of contact links */
-        height: 35px;
-    }
-    .contact-logo {
-        width: 80%; /* Adjust the width of logos within the contact link */
+        width: 55px; /* Adequate size for icons */
+        height: 55px;
     }
 }
+
+/* Very small devices such as older iPhone models */
+@media (max-width: 393px) {
+    .header-content,
+    .education-entry,
+    .contact-link,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 1.2em; /* Smallest font size for clarity */
+    }
+
+    .contact-link {
+        width: 35px; /* Smaller icons to fit the screen */
+        height: 35px;
+    }
+
+    .contact-logo {
+        width: 80%; /* Adjust logo width within the contact link for visibility */
+    }
+}
+
 
 
