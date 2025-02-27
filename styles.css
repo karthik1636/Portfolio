@@ -388,11 +388,13 @@ span {
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
     .header-content {
-        font-size: 1em; /* Adjust font size slightly for smaller screens */
         white-space: normal; /* Allow wrapping on smaller screens */
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Center content to handle wrapping gracefully */
+        flex-direction: column; /* Stack the text vertically if needed */
+        align-items: center; /* Center align the text */
+        justify-content: center; /* Center content horizontally */
+        text-align: center; /* Ensure text is centered within each line */
+        padding: 10px 0; /* Add padding to maintain spacing around the text */
     }
     
     .header-background,
@@ -428,23 +430,9 @@ span {
     }
 }
 
-
-@media (max-width: 1024px) and (min-width: 705px) {
-    .header-content {
-        font-size: 0.9em; /* Specific font size adjustment for 705px to 1024px */
-    }
-}
-
-
-@media (max-width: 860px) {
-    .header-content {
-        font-size: 0.95em; /* Reduce font size for narrower screens */
-    }
-}
-
 @media (max-width: 768px) {
     .header-content {
-        font-size: 0.9em; /* Further reduce font size for better readability */
+        font-size: 1em; /* Slightly reduce font size for narrower screens */
     }
 
     .logo-container img {
@@ -467,7 +455,7 @@ span {
 
 @media (max-width: 480px) {
     .header-content {
-        font-size: 0.85em; /* Smallest font size for very small devices */
+        font-size: 0.9em; /* Further reduce font size for very small devices */
     }
 
     nav a {
