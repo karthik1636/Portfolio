@@ -375,19 +375,23 @@ span {
     object-fit: contain;
 }
 
-/* Improved header styling to wrap text and ensure it starts on a new line if needed */
+/* Base styling for header content - keeping desktop layout unchanged */
 .header-content {
-    font-size: 1.2em; /* Adjust font size if necessary */
-    line-height: 1.4; /* Ensure adequate line spacing */
-    white-space: normal; /* Allow wrapping */
-    padding: 0 20px; /* Add horizontal padding */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center content */
+    font-size: 1.2em; /* Standard font size */
+    line-height: 1.4; /* Standard line spacing */
+    white-space: nowrap; /* Prevent wrapping on large screens */
+    padding: 0 20px; /* Horizontal padding for alignment */
 }
 
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
+    .header-content {
+        white-space: normal; /* Allow wrapping on smaller screens */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center content to handle wrapping gracefully */
+    }
+    
     .header-background,
     .section,
     .about-container {
@@ -395,43 +399,42 @@ span {
     }
 
     nav {
-        position: absolute; /* Ensure navigation is positioned relative to its nearest positioned ancestor */
+        position: absolute;
         top: 0;
         left: 0;
-        right: 0; /* This will remove the gap on the right */
-        width: 100%; /* Ensure it spans the full width of the viewport */
-        padding: 0; /* Adjust padding to remove any white gaps */
+        right: 0;
+        width: 100%; /* Span the full width */
+        padding: 0; /* No padding to eliminate gaps */
     }
 
     .about-text {
-        order: 1; /* Make text appear below the image when screen is too small */
+        order: 1; /* Text below image on smaller screens */
     }
 
     .about-container {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column;
     }
 
     .logo-container img {
-        width: 60px; /* Reduce the logo size */
+        width: 60px; /* Adjust logo size on smaller screens */
         height: auto;
     }
 
     .section {
-        padding: 15px; /* Reduce padding for all sections */
+        padding: 15px; /* Adjust padding for sections */
     }
 }
 
-/* Additional tweaks for very small devices */
 @media (max-width: 768px) {
     .header-content,
     .education-entry,
     .experience-entry .logo-container img,
     .text-content h3 {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 16px; /* Increase font size for better readability on smaller screens */
     }
 
     .logo-container img {
-        width: 50px; /* Further reduce the logo size */
+        width: 50px; /* Further reduce logo size for small devices */
         height: auto;
     }
 
@@ -439,33 +442,33 @@ span {
     .education-entry,
     .experience-entry,
     .project-entry {
-        padding: 10px; /* Reduce padding */
-        flex-direction: column; /* Ensure vertical stacking for compact layout */
+        padding: 10px; /* Reduce padding for compact layout */
+        flex-direction: column;
     }
 
     nav a {
-        padding: 10px 20px; /* Adjust navigation link padding */
+        padding: 10px 20px; /* Adjust nav link padding */
     }
 }
 
-/* Specific adjustments for mobile devices */
 @media (max-width: 480px) {
     .header-content {
-        font-size: 14px; /* Smaller text in the header */
+        font-size: 14px; /* Further adjust font size for very small devices */
     }
 
     nav a {
-        padding: 8px 16px; /* Smaller padding for navigation links */
+        padding: 8px 16px; /* Smaller padding for nav links on very small devices */
     }
 
     .about-container,
     .education-entry,
     .experience-entry,
     .project-entry {
-        flex-direction: column; /* Stack all content vertically for mobile */
+        flex-direction: column; /* Stack all content vertically */
     }
 
     .logo-container {
         justify-content: center; /* Center logos within their containers */
     }
 }
+
