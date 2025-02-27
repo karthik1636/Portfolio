@@ -388,6 +388,7 @@ span {
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
     .header-content {
+        font-size: 1em; /* Adjust font size slightly for smaller screens */
         white-space: normal; /* Allow wrapping on smaller screens */
         display: flex;
         flex-wrap: wrap;
@@ -427,12 +428,15 @@ span {
     }
 }
 
+@media (max-width: 860px) {
+    .header-content {
+        font-size: 0.95em; /* Reduce font size for narrower screens */
+    }
+}
+
 @media (max-width: 768px) {
-    .header-content,
-    .education-entry,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 16px; /* Increase font size for better readability on smaller screens */
+    .header-content {
+        font-size: 0.9em; /* Further reduce font size for better readability */
     }
 
     .logo-container img {
@@ -455,7 +459,7 @@ span {
 
 @media (max-width: 480px) {
     .header-content {
-        font-size: 14px; /* Further adjust font size for very small devices */
+        font-size: 0.85em; /* Smallest font size for very small devices */
     }
 
     nav a {
@@ -471,18 +475,5 @@ span {
 
     .logo-container {
         justify-content: center; /* Center logos within their containers */
-    }
-}
-
-/* Additional Media Queries for specific problem screen widths */
-@media (max-width: 770px) and (min-width: 721px) {
-    .header-content {
-        font-size: 15px; /* Adjust font size for better visibility */
-    }
-}
-
-@media (max-width: 860px) and (min-width: 771px) {
-    .header-content {
-        font-size: 17px; /* Increase font size to prevent cut-offs */
     }
 }
