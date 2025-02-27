@@ -375,13 +375,6 @@ span {
     object-fit: contain;
 }
 
-/* Base styling for header content - keeping desktop layout unchanged */
-.header-content {
-    font-size: 1.2em; /* Standard font size */
-    line-height: 1.4; /* Standard line spacing */
-    white-space: nowrap; /* Prevent wrapping on large screens */
-    padding: 0 20px; /* Horizontal padding for alignment */
-}
 
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
