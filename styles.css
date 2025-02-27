@@ -383,36 +383,71 @@ span {
     padding: 0 20px; /* Add horizontal padding */
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1024px) {
-    .header-content {
-        font-size: 1.8em; /* Increase font size for better readability on tablets */
-    }
+
+/* Adjustments for the navigation bar to align properly with the cover image */
+nav {
+    position: absolute; /* Change from 'sticky' to 'absolute' */
+    top: 0;
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    padding: 0; /* Remove any default padding */
+    box-shadow: none; /* Optionally remove shadow if not needed */
 }
 
+/* Reducing padding and margin for logos in sections */
+.logo-container img {
+    width: 60px; /* Adjust the logo size */
+    height: auto;
+    margin-right: 10px; /* Ensure logos are not too spaced out */
+}
+
+/* Consistent padding and margin for sections */
+.section, .education-entry, .experience-entry, .project-entry {
+    padding: 20px; /* Standard padding */
+    margin: 20px 10px; /* Adjust margins to prevent cut-off and maintain uniform spacing */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Adjust the layout of the 'About Me' section for better alignment */
+.about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center the text */
+}
+
+.about-text {
+    order: 2; /* Ensure the text comes after the image */
+    padding-top: 20px; /* Space between image and text */
+}
+
+.cover-pic {
+    order: 1; /* Image comes first */
+    width: 100%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .header-content {
-        font-size: 1.5em; /* Adjust font size for smaller devices */
-        text-align: center; /* Center the text on small screens */
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .section, .education-entry, .experience-entry, .project-entry {
+        padding: 15px; /* Smaller padding on smaller screens */
+    }
+
+    .logo-container img {
+        width: 50px; /* Smaller logos on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .header-content {
-        font-size: 1.2em; /* Further reduce font size on mobile devices */
+    .nav a {
+        padding: 10px 15px; /* Smaller navigation links */
     }
-}
 
-/* Adjust margins and padding for section alignment */
-.section, .education-entry, .experience-entry, .project-entry {
-    margin-right: 10px; /* Ensure no cut-off on the right */
-    padding: 20px; /* Standardize padding */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Enhance visibility of section boundaries */
-}
-
-@media (max-width: 768px) {
-    .section, .education-entry, .experience-entry, .project-entry {
-        padding: 15px; /* Adjust padding on smaller screens */
-        margin-right: 5px; /* Reduce margin on smaller devices */
+    .about-container {
+        padding: 10px; /* Adequate spacing */
     }
 }
