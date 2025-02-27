@@ -375,131 +375,85 @@ span {
     object-fit: contain;
 }
 
-/* Base settings for larger devices and general adjustments */
+/* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
+    .header-background,
+    .section,
+    .about-container,
+    .education-entry,
+    .experience-entry,
+    .project-entry {
+        width: 100%; /* Ensure full width on smaller devices */
+    }
+
+    .nav {
+        position: relative; /* Adjust navigation to fit within the header image */
+    }
+
+    .about-text {
+        order: 1; /* Make text appear below the image when screen is too small */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .logo-container img {
+        width: 60px; /* Reduce the logo size */
+        height: auto;
+    }
+
+    .section {
+        padding: 15px; /* Reduce padding for all sections */
+    }
+}
+
+/* Additional tweaks for very small devices */
+@media (max-width: 768px) {
+    .header-content,
+    .education-entry,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .logo-container img {
+        width: 50px; /* Further reduce the logo size */
+        height: auto;
+    }
+
+    .section,
+    .education-entry,
+    .experience-entry,
+    .project-entry {
+        padding: 10px; /* Reduce padding */
+        flex-direction: column; /* Ensure vertical stacking for compact layout */
+    }
+
+    .nav a {
+        padding: 10px 20px; /* Adjust navigation link padding */
+    }
+}
+
+/* Specific adjustments for mobile devices */
+@media (max-width: 480px) {
     .header-content {
-        font-size: 1.8em; /* Slightly larger font for tablets */
+        font-size: 14px; /* Smaller text in the header */
+    }
+
+    .nav a {
+        padding: 8px 16px; /* Smaller padding for navigation links */
+    }
+
+    .about-container,
+    .education-entry,
+    .experience-entry,
+    .project-entry {
+        flex-direction: column; /* Stack all content vertically for mobile */
+    }
+
+    .logo-container {
+        justify-content: center; /* Center logos within their containers */
     }
 }
 
-/* Media Queries for various iPhone models and other similar devices */
-/* Targeting iPhone 16 Pro Max, 15 Pro Max, and similar large models */
-@media (max-width: 440px) {
-    .header-content,
-    .education-entry,
-    .contact-link,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 1.5em; /* Suitable font size for larger phones */
-    }
-
-    .contact-link,
-    .logo-container img {
-        width: 60px; /* Adjust icon and logo sizes for better visibility */
-        height: 60px;
-    }
-
-    .education-entry,
-    .project-entry,
-    .section {
-        padding: 15px; /* Adequate padding for readability */
-        flex-direction: column; /* Stack elements vertically */
-    }
-}
-
-/* Adjustments for mid-sized models like iPhone 16, 16 Plus */
-@media (max-width: 430px) {
-    .header-content,
-    .education-entry,
-    .contact-link,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 1.4em; /* Adjust font size for readability */
-    }
-
-    .contact-link,
-    .logo-container img {
-        width: 55px; /* Slightly smaller icons suitable for mid-sized screens */
-        height: 55px;
-    }
-
-    .education-entry,
-    .project-entry,
-    .section {
-        padding: 15px; /* Adequate padding for readability */
-        flex-direction: column; /* Stack elements vertically */
-    }
-}
-
-/* Specific settings for smaller models like iPhone 16 Pro */
-@media (max-width: 402px) {
-    .header-content,
-    .education-entry,
-    .contact-link,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 1.3em; /* Reduce font size for smaller devices */
-    }
-
-    .contact-link {
-        width: 50px; /* Smaller icons for compact display */
-        height: 50px;
-    }
-
-    .education-entry,
-    .project-entry,
-    .section {
-        padding: 15px; /* Adequate padding for readability */
-        flex-direction: column; /* Stack elements vertically */
-    }
-}
-
-/* Adjustments for models like iPhone 14 Plus, 13 Pro Max, 12 Pro Max */
-@media (max-width: 428px) {
-    .header-content,
-    .education-entry,
-    .contact-link,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 1.5em; /* Maintain a readable font size */
-    }
-
-    .contact-link {
-        width: 55px; /* Adequate size for icons */
-        height: 55px;
-    }
-
-    .education-entry,
-    .project-entry,
-    .section {
-        padding: 15px; /* Adequate padding for readability */
-        flex-direction: column; /* Stack elements vertically */
-    }
-}
-
-/* Very small devices such as older iPhone models */
-@media (max-width: 393px) {
-    .header-content,
-    .education-entry,
-    .contact-link,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 1.2em; /* Smallest font size for clarity */
-    }
-
-    .contact-link {
-        width: 35px; /* Smaller icons to fit the screen */
-        height: 35px;
-    }
-
-    .contact-logo {
-        width: 80%; /* Adjust logo width within the contact link for visibility */
-    }
-
-    .education-entry,
-    .project-entry,
-    .section {
-        padding: 10px; /* Adequate padding for readability */
-        flex-direction: column; /* Stack elements vertically */
-    }
-}
