@@ -431,9 +431,7 @@ span {
 }
 
 @media (max-width: 768px) {
-    .header-content {
-        font-size: 1em; /* Slightly reduce font size for narrower screens */
-    }
+
 
     .logo-container img {
         width: 50px; /* Further reduce logo size for small devices */
