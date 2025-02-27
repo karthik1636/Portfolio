@@ -375,85 +375,44 @@ span {
     object-fit: contain;
 }
 
-/* Media Queries to handle different screen sizes more effectively */
+/* Improved header styling to wrap text */
+.header-content {
+    font-size: 1.2em; /* Adjust font size if necessary */
+    line-height: 1.4; /* Ensure adequate line spacing */
+    white-space: normal; /* Allow wrapping */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 1024px) {
-    .header-background,
-    .section,
-    .about-container,
-    .education-entry,
-    .experience-entry,
-    .project-entry {
-        width: 100%; /* Ensure full width on smaller devices */
-    }
-
-    .nav {
-        position: relative; /* Adjust navigation to fit within the header image */
-    }
-
-    .about-text {
-        order: 1; /* Make text appear below the image when screen is too small */
-    }
-
-    .about-container {
-        flex-direction: column; /* Stack image and text vertically */
-    }
-
-    .logo-container img {
-        width: 60px; /* Reduce the logo size */
-        height: auto;
-    }
-
-    .section {
-        padding: 15px; /* Reduce padding for all sections */
+    .header-content {
+        font-size: 1.8em; /* Increase font size for better readability on tablets */
     }
 }
 
-/* Additional tweaks for very small devices */
 @media (max-width: 768px) {
-    .header-content,
-    .education-entry,
-    .experience-entry .logo-container img,
-    .text-content h3 {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-
-    .logo-container img {
-        width: 50px; /* Further reduce the logo size */
-        height: auto;
-    }
-
-    .section,
-    .education-entry,
-    .experience-entry,
-    .project-entry {
-        padding: 10px; /* Reduce padding */
-        flex-direction: column; /* Ensure vertical stacking for compact layout */
-    }
-
-    .nav a {
-        padding: 10px 20px; /* Adjust navigation link padding */
+    .header-content {
+        font-size: 1.5em; /* Adjust font size for smaller devices */
+        text-align: center; /* Center the text on small screens */
     }
 }
 
-/* Specific adjustments for mobile devices */
 @media (max-width: 480px) {
     .header-content {
-        font-size: 14px; /* Smaller text in the header */
-    }
-
-    .nav a {
-        padding: 8px 16px; /* Smaller padding for navigation links */
-    }
-
-    .about-container,
-    .education-entry,
-    .experience-entry,
-    .project-entry {
-        flex-direction: column; /* Stack all content vertically for mobile */
-    }
-
-    .logo-container {
-        justify-content: center; /* Center logos within their containers */
+        font-size: 1.2em; /* Further reduce font size on mobile devices */
     }
 }
 
+/* Adjust margins and padding for section alignment */
+.section, .education-entry, .experience-entry, .project-entry {
+    margin-right: 10px; /* Ensure no cut-off on the right */
+    padding: 20px; /* Standardize padding */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Enhance visibility of section boundaries */
+}
+
+@media (max-width: 768px) {
+    .section, .education-entry, .experience-entry, .project-entry {
+        padding: 15px; /* Adjust padding on smaller screens */
+        margin-right: 5px; /* Reduce margin on smaller devices */
+    }
+}
