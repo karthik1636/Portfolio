@@ -375,25 +375,32 @@ span {
     object-fit: contain;
 }
 
-/* Improved header styling to wrap text */
+/* Improved header styling to wrap text and ensure it starts on a new line if needed */
 .header-content {
     font-size: 1.2em; /* Adjust font size if necessary */
     line-height: 1.4; /* Ensure adequate line spacing */
     white-space: normal; /* Allow wrapping */
     padding: 0 20px; /* Add horizontal padding */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content */
 }
 
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
     .header-background,
     .section,
-    .about-container
-    {
+    .about-container {
         width: 100%; /* Ensure full width on smaller devices */
     }
 
-    .nav {
-        position: relative; /* Adjust navigation to fit within the header image */
+    nav {
+        position: absolute; /* Ensure navigation is positioned relative to its nearest positioned ancestor */
+        top: 0;
+        left: 0;
+        right: 0; /* This will remove the gap on the right */
+        width: 100%; /* Ensure it spans the full width of the viewport */
+        padding: 0; /* Adjust padding to remove any white gaps */
     }
 
     .about-text {
@@ -436,7 +443,7 @@ span {
         flex-direction: column; /* Ensure vertical stacking for compact layout */
     }
 
-    .nav a {
+    nav a {
         padding: 10px 20px; /* Adjust navigation link padding */
     }
 }
@@ -447,7 +454,7 @@ span {
         font-size: 14px; /* Smaller text in the header */
     }
 
-    .nav a {
+    nav a {
         padding: 8px 16px; /* Smaller padding for navigation links */
     }
 
