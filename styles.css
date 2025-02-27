@@ -428,6 +428,14 @@ span {
     }
 }
 
+
+@media (max-width: 1024px) and (min-width: 705px) {
+    .header-content {
+        font-size: 0.9em; /* Specific font size adjustment for 705px to 1024px */
+    }
+}
+
+
 @media (max-width: 860px) {
     .header-content {
         font-size: 0.95em; /* Reduce font size for narrower screens */
