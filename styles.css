@@ -383,71 +383,82 @@ span {
     padding: 0 20px; /* Add horizontal padding */
 }
 
-
-/* Adjustments for the navigation bar to align properly with the cover image */
-nav {
-    position: absolute; /* Change from 'sticky' to 'absolute' */
-    top: 0;
-    left: 0; /* Align to the left edge */
-    width: 100%; /* Ensure it spans the full width of the viewport */
-    padding: 0; /* Remove any default padding */
-    box-shadow: none; /* Optionally remove shadow if not needed */
-}
-
-/* Reducing padding and margin for logos in sections */
-.logo-container img {
-    width: 60px; /* Adjust the logo size */
-    height: auto;
-    margin-right: 10px; /* Ensure logos are not too spaced out */
-}
-
-/* Consistent padding and margin for sections */
-.section, .education-entry, .experience-entry, .project-entry {
-    padding: 20px; /* Standard padding */
-    margin: 20px 10px; /* Adjust margins to prevent cut-off and maintain uniform spacing */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-}
-
-/* Adjust the layout of the 'About Me' section for better alignment */
-.about-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align items */
-    text-align: center; /* Center the text */
-}
-
-.about-text {
-    order: 2; /* Ensure the text comes after the image */
-    padding-top: 20px; /* Space between image and text */
-}
-
-.cover-pic {
-    order: 1; /* Image comes first */
-    width: 100%; /* Responsive width */
-    max-width: 300px; /* Maximum width */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
+/* Media Queries to handle different screen sizes more effectively */
+@media (max-width: 1024px) {
+    .header-background,
+    .section,
+    .about-container
+    {
+        width: 100%; /* Ensure full width on smaller devices */
     }
 
-    .about-text,
-    .section, .education-entry, .experience-entry, .project-entry {
-        padding: 15px; /* Smaller padding on smaller screens */
+    .nav {
+        position: relative; /* Adjust navigation to fit within the header image */
+    }
+
+    .about-text {
+        order: 1; /* Make text appear below the image when screen is too small */
+    }
+
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
     }
 
     .logo-container img {
-        width: 50px; /* Smaller logos on smaller screens */
+        width: 60px; /* Reduce the logo size */
+        height: auto;
+    }
+
+    .section {
+        padding: 15px; /* Reduce padding for all sections */
     }
 }
 
-@media (max-width: 480px) {
-    .nav a {
-        padding: 10px 15px; /* Smaller navigation links */
+/* Additional tweaks for very small devices */
+@media (max-width: 768px) {
+    .header-content,
+    .education-entry,
+    .experience-entry .logo-container img,
+    .text-content h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 
-    .about-container {
-        padding: 10px; /* Adequate spacing */
+    .logo-container img {
+        width: 50px; /* Further reduce the logo size */
+        height: auto;
+    }
+
+    .section,
+    .education-entry,
+    .experience-entry,
+    .project-entry {
+        padding: 10px; /* Reduce padding */
+        flex-direction: column; /* Ensure vertical stacking for compact layout */
+    }
+
+    .nav a {
+        padding: 10px 20px; /* Adjust navigation link padding */
+    }
+}
+
+/* Specific adjustments for mobile devices */
+@media (max-width: 480px) {
+    .header-content {
+        font-size: 14px; /* Smaller text in the header */
+    }
+
+    .nav a {
+        padding: 8px 16px; /* Smaller padding for navigation links */
+    }
+
+    .about-container,
+    .education-entry,
+    .experience-entry,
+    .project-entry {
+        flex-direction: column; /* Stack all content vertically for mobile */
+    }
+
+    .logo-container {
+        justify-content: center; /* Center logos within their containers */
     }
 }
