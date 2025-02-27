@@ -376,6 +376,15 @@ span {
 }
 
 
+
+/* Base styling for header content - keeping desktop layout unchanged */
+.header-content {
+    font-size: 1.2em; /* Standard font size */
+    line-height: 1.4; /* Standard line spacing */
+    white-space: nowrap; /* Prevent wrapping on large screens */
+    padding: 0 20px; /* Horizontal padding for alignment */
+}
+
 /* Media Queries to handle different screen sizes more effectively */
 @media (max-width: 1024px) {
     .header-content {
@@ -465,3 +474,15 @@ span {
     }
 }
 
+/* Additional Media Queries for specific problem screen widths */
+@media (max-width: 770px) and (min-width: 721px) {
+    .header-content {
+        font-size: 15px; /* Adjust font size for better visibility */
+    }
+}
+
+@media (max-width: 860px) and (min-width: 771px) {
+    .header-content {
+        font-size: 17px; /* Increase font size to prevent cut-offs */
+    }
+}
