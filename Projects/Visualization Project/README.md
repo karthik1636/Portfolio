@@ -1,4 +1,4 @@
-# Health and Pollution Relationship Analysis
+# Health, Wealth and Pollution Relationship Analysis
 
 ## Project Overview 📘🌍📊
 This project explores the relationship between **health outcomes, pollution levels, and economic conditions** by aggregating and analyzing global datasets. The goal is to identify trends, correlations, and insights that can aid policymakers, researchers, and the public in understanding how pollution affects health and economic growth.
