@@ -84,6 +84,6 @@ This project focuses on predicting diabetes risk using machine learning techniqu
 
 ### Contributors 👨‍💻👥📜
 - **Team Members:** Karthik Mettu, Mahamadou Brehima, Swajan Reddy, Jacob Smith.
-- **Contact:** [GitHub Profile](https://github.com/karthikmettu) 📌📧📜
+- **Contact:** [GitHub Profile](https://github.com/karthik1636) 📌📧📜
 
 ---
