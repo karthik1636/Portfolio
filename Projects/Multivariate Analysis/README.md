@@ -83,5 +83,5 @@ The goal of this project is to:
 
 ### Contributors 👨‍💻👥📜
 - **Author:** Karthik Mettu
-- **Contact:** [GitHub Profile](https://github.com/karthikmettu)  🎯📌📬
+- **Contact:** [GitHub Profile](https://github.com/karthik1636)  🎯📌📬
 
