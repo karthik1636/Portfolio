@@ -369,9 +369,9 @@ span {
 }
 
 .contact-logo {
-    width: 70%;
+    width: 30%;
     height: auto;
-    padding: 15%;
+    padding: 10%;
     object-fit: contain;
 }
 
