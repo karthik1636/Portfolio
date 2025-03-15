@@ -313,9 +313,9 @@ span {
 }
 
 .project-cover {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -369,9 +369,9 @@ span {
 }
 
 .contact-logo {
-    width: 30%;
+    width: 70%;
     height: auto;
-    padding: 10%;
+    padding: 15%;
     object-fit: contain;
 }
 
