@@ -9,7 +9,7 @@
         <td>
           <strong>Karthik Mettu</strong><br>
           <a href="https://www.linkedin.com/in/karthik-mettu" target="_blank" style="text-decoration:none; color:#0A66C2;">
-            <img src="linkedin.webp" width="40" style="vertical-align:middle; margin-right:4px;">
+            <img src="linkedin.webp" width="50" style="vertical-align:middle; margin-right:4px;">
             linkedin.com/in/karthik-mettu
           </a>
         </td>
